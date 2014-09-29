@@ -1,0 +1,58 @@
+body {
+	padding: 0px;
+	margin: 0px;
+	background-color: black;
+}
+
+.square {
+	display: inline-block;
+}
+
+#one {
+	background-color: maroon;
+}
+
+#two {
+	background-color: red;
+}
+
+#three {
+	background-color: orange;
+}
+
+#four {
+	background-color: yellow;
+}
+
+#five {
+	background-color: greenyellow;
+}
+
+#six {
+	background-color: green;
+}
+
+#seven {
+	background-color: lightblue;
+}
+
+#eight {
+	background-color: blue;
+}
+
+#nine {
+	background-color: indigo;
+}
+
+#ten {
+	background-color: purple;
+}
+
+#eleven {
+	background-color: magenta;
+}
+
+#twelve {
+	background-color: pink;
+}
+

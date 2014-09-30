@@ -1,3 +1,5 @@
+var NUM_SQUARES = 12;
+
 $(function() {
 	setSquareSize();
 	startSquareAnimation();
@@ -28,23 +30,18 @@ function startSquareAnimation () {
 	var colors = ['maroon', 'red', 'orange', 'yellow', 
 				  'greenyellow', 'green', 'lightblue', 'blue', 
 				  'indigo', 'purple', 'magenta', 'pink'];
+	var squareLoopingOrder = ['#one', '#two', '#three', '#four',
+				  '#four', '#five', '#six', '#twelve', '#eleven', 
+				  '#ten', '#nine', '#eight', '#seven'];
 	var counter = 1;
 	
 	//start a timed interval, that will execute the code within it every x milliseconds
 	setInterval(function () {
 		//change the css color attribute of the html elements, with a looping effect
-		$('#one').css('background-color', colors[(counter) % 12]);
-		$('#two').css('background-color', colors[(counter + 1) % 12]);
-		$('#three').css('background-color', colors[(counter + 2) % 12]);
-		$('#four').css('background-color', colors[(counter + 3) % 12]);
-		$('#five').css('background-color', colors[(counter + 4) % 12]);
-		$('#six').css('background-color', colors[(counter + 5) % 12]);
-		$('#twelve').css('background-color', colors[(counter + 6) % 12]);
-		$('#eleven').css('background-color', colors[(counter + 7) % 12]);
-		$('#ten').css('background-color', colors[(counter + 8) % 12]);
-		$('#nine').css('background-color', colors[(counter + 9) % 12]);
-		$('#eight').css('background-color', colors[(counter + 10) % 12]);
-		$('#seven').css('background-color', colors[(counter + 11) % 12]);
+		for(var i=0; i<NUM_SQUARES; i++) {
+			var color = colors[(counter + i) % NUM_SQUARES];
+			$(squareLoopingOrder[i]).css('background-color', color);
+		}
 		
 		//increase the counter until it reaches 4, then reset the counter
 		if (counter < 12) {

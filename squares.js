@@ -31,7 +31,7 @@ function startSquareAnimation () {
 				  'greenyellow', 'green', 'lightblue', 'blue', 
 				  'indigo', 'purple', 'magenta', 'pink'];
 	var squareLoopingOrder = ['#one', '#two', '#three', '#four',
-				  '#four', '#five', '#six', '#twelve', '#eleven', 
+				  '#five', '#six', '#twelve', '#eleven', 
 				  '#ten', '#nine', '#eight', '#seven'];
 	var counter = 1;
 	
